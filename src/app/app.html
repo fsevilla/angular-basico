@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<main>
+  <h1>hola mundo</h1>
+
+  <app-table [datos]="nombres" [titulo]="'Nombre'"></app-table>
+
+  <input #campo type="text" (keyup)="detectarTexto($event)">
+
+  <button (click)="agregarNombre(campo)" [disabled]="!nuevoNombre">Agregar nombre</button>
+
+  <hr>
+
+  <app-canciones></app-canciones>
+</main>
+
+
+<app-footer></app-footer>

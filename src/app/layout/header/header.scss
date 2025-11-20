@@ -1,0 +1,14 @@
+@use "../../../styles/variables";
+
+header {
+    height: 80px;
+    padding: 0 20px;
+    background-color: variables.$color-primario;
+    color: white;
+
+    > span { 
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 80px;
+    }
+}
