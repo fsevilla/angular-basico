@@ -17,4 +17,8 @@ export class Canciones {
     'Cancion 5',
   ]
 
+  itemSelectedHandler(e: string) {
+    console.log('Seleccionaron un item de mi hijo', e);
+  }
+
 }

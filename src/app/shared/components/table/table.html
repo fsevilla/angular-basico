@@ -1,10 +1,14 @@
 <table>
-    <tr>
-        <th>{{titulo}}</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>{{titulo}}</th>
+        </tr>
+    </thead>
+    <tbody>
 @for (item of items; track $index) {
-    <tr>
+    <tr (click)="clickHandler(item)">
         <td>{{item}}</td>
     </tr>
 }
+    </tbody>
 </table>

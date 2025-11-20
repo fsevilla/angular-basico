@@ -1,0 +1,14 @@
+<form (submit)="submitHandler()">
+    <div>
+        <input type="text" placeholder="Nombre" name="name" [ngModel]="nombre">
+    </div>
+    <div>
+        <input type="email" placeholder="Correo electronico" name="email">
+    </div>
+    <div>
+        <textarea placeholder="Mensaje..." name="mensaje"></textarea>
+    </div>
+    <div>
+        <button>Enviar</button>
+    </div>
+</form>

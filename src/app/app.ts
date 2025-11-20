@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 import { Table } from './shared/components/table/table';
-import { Canciones } from './pages/canciones/canciones';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, Table, Canciones],
+  imports: [Header, Footer, Table, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -20,15 +21,20 @@ export class App {
   ]
 
   nuevoNombre: string = '';
+
+  titulo = 'Nombres'
   
 
   agregarNombre(campo?: HTMLInputElement) {
-    this.nombres.push(this.nuevoNombre);
+    // this.nombres.push(this.nuevoNombre);
+    this.nombres = [...this.nombres, this.nuevoNombre];
     console.log('Agregar nombre', this.nuevoNombre);
     if (campo) {
       campo.value = '';
       this.nuevoNombre = '';
     }
+    console.log('Nombres: ', this.nombres);
+    this.titulo = `Nombres (${this.nombres.length})`
   }
 
   detectarTexto(evento: KeyboardEvent) {

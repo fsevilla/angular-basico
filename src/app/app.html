@@ -3,7 +3,7 @@
 <main>
   <h1>hola mundo</h1>
 
-  <app-table [datos]="nombres" [titulo]="'Nombre'"></app-table>
+  <app-table [datos]="nombres" [titulo]="titulo"></app-table>
 
   <input #campo type="text" (keyup)="detectarTexto($event)">
 
@@ -11,7 +11,11 @@
 
   <hr>
 
-  <app-canciones></app-canciones>
+  <router-outlet></router-outlet>
+  
+  <hr>
+
+  
 </main>
 
 

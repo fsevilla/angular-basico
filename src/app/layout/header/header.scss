@@ -5,10 +5,27 @@ header {
     padding: 0 20px;
     background-color: variables.$color-primario;
     color: white;
+    display: flex;
 
     > span { 
         font-size: 32px;
         font-weight: bold;
         line-height: 80px;
+    }
+
+    a {
+        color: white;
+        margin-left:10px;
+        line-height: 80px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    span.spacer {
+        flex: 1 1 auto;
     }
 }
