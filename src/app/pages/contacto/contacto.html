@@ -1,14 +1,23 @@
 <form (submit)="submitHandler()">
+    @if (isError) {
+        <div class="error">Oops! Algo salio mal.</div>
+    }
+
+    @if (isSuccess) {
+        <div class="success">Tu mensaje se envio con exito</div>
+    }
+
     <div>
-        <input type="text" placeholder="Nombre" name="name" [ngModel]="nombre">
+        <input type="text" placeholder="Nombre" name="name" [(ngModel)]="nombre">
     </div>
     <div>
-        <input type="email" placeholder="Correo electronico" name="email">
+        <input type="email" placeholder="Correo electronico" name="email" [(ngModel)]="email">
     </div>
     <div>
-        <textarea placeholder="Mensaje..." name="mensaje"></textarea>
+        <textarea placeholder="Mensaje..." name="mensaje" [(ngModel)]="mensaje"></textarea>
     </div>
     <div>
-        <button>Enviar</button>
+        <button [disabled]="isLoading">Enviar</button>
     </div>
 </form>
+

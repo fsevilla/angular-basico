@@ -14,4 +14,20 @@ form {
     textarea {
         height: 120px;
     }
+
+    .error {
+        background-color: rgba(255,0,0, 0.3);
+        color: darkred;
+        padding: 12px 10px;
+        border: darkred;
+        border-radius: 5px;
+    }
+
+    .success {
+        background-color: rgba(0,255,0, 0.3);
+        color: darkgreen;
+        padding: 12px 10px;
+        border: darkgreen;
+        border-radius: 5px;
+    }
 }
