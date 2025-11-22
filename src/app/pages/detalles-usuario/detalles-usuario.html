@@ -1,0 +1,17 @@
+<a routerLink="..">&lt; Regresar</a>
+
+
+<div class="container">
+    @if (usuario) {
+    <div>
+        <strong>Nombre: </strong>
+        <span>{{usuario.name}}</span>
+    </div>
+    <div>
+        <strong>Email: </strong>
+        <span>{{usuario.email}}</span>
+    </div>
+    } @else {
+        <p>No hay usuario</p>
+    }
+</div>

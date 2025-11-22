@@ -22,6 +22,8 @@ export class Table implements OnChanges, OnInit {
 
   @Output() onItemSelected: EventEmitter<string> = new EventEmitter();
 
+  @Input('seleccionado') itemSeleccionado: string = '';
+
   ngOnInit(): void {
     // pedir datos al api
   }
@@ -40,6 +42,7 @@ export class Table implements OnChanges, OnInit {
 
   clickHandler(elemento: string) {
     console.log('Ocurrio un click', elemento)
+    this.itemSeleccionado = elemento;
     this.onItemSelected.emit(elemento);
   }
 

@@ -26,6 +26,10 @@ export class Usuario {
     return this.httpClient.get<IUsuario[]>('https://jsonplaceholder.typicode.com/users')
   }
 
+  getUsuarioPorId(id: string): Observable<IUsuario> {
+    return this.httpClient.get<IUsuario>('https://jsonplaceholder.typicode.com/users/' + id)
+  }
+
   crearUsuario() {}
 
 }

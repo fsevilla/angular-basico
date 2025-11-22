@@ -1,0 +1,15 @@
+
+
+@if (usuario) {
+<div>
+    <strong>Nombre: </strong>
+    <span>{{usuario.name}}</span>
+</div>
+<div>
+    <strong>Email: </strong>
+    <span>{{usuario.email}}</span>
+</div>
+<button (click)="cancelar()">Cancelar</button>
+} @else {
+    <p>No has seleccionado ningun usuario</p>
+}

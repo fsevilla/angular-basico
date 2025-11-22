@@ -3,7 +3,12 @@
 <table>
     <tbody>
 @for (item of displayedItems; track $index) {
-    <tr (click)="clickHandler(item)">
+    <tr 
+        (click)="clickHandler(item)" 
+        [ngStyle]="{ 
+            'color': item === itemSeleccionado ?  'blue' : 'black' 
+        }"
+    >
         <td>{{item}}</td>
     </tr>
 }
